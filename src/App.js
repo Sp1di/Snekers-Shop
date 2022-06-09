@@ -5,18 +5,45 @@ function App() {
       <div className="wrapper clear">
           <div className="overlay">
             <div className="drawer">
-                <h2>Корзина</h2>
+                <h2 className="mb-40">Корзина</h2>
+                <div className="items">
+                    <div className="cartItem d-flex align-center">
+                        <div style={{backgroundImage:'url(/img/sneakers/1.jpg)'}}
+                             className="cartItemImg ">
 
-                <div className="cartItem d-flex align-center">
-                    <div style={{backgroundImage:'url(/img/sneakers/1.jpg)'}}
-                         className="cartItemImg ">
+                        </div>
+                        <div className="mr-20 flex">
+                            <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                            <strong>12 999 р.</strong>
+                        </div>
+                        <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
+                    </div>
+                    <div className="cartItem d-flex align-center">
+                        <div style={{backgroundImage:'url(/img/sneakers/1.jpg)'}}
+                             className="cartItemImg ">
 
+                        </div>
+                        <div className="mr-20 flex">
+                            <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                            <strong>12 999 р.</strong>
+                        </div>
+                        <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
                     </div>
-                    <div className="mr-20 flex">
-                        <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
-                        <strong>12 999 р.</strong>
-                    </div>
-                    <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
+                </div>
+                <div className="cartTotalBlock">
+                    <ul>
+                        <li >
+                            <span>Итого:</span>
+                            <div></div>
+                            <strong> 21 498 руб.</strong>
+                        </li>
+                        <li >
+                            <span>Налог 5%:</span>
+                            <div></div>
+                            <strong>1044 руб.</strong>
+                        </li>
+                    </ul>
+                    <button>Оформить заказ</button>
                 </div>
             </div>
           </div>
