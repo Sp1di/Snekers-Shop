@@ -5,7 +5,9 @@ function App() {
       <div className="wrapper clear">
           <div className="overlay">
             <div className="drawer">
-                <h2 className="mb-40">Корзина</h2>
+                <h2 className="mb-40 d-flex justify-between ">
+                    Корзина<img className="removeBtn cu-p" src="/img/btn-remove.svg" alt="Remove"/>
+                </h2>
                 <div className="items">
                     <div className="cartItem d-flex align-center">
                         <div style={{backgroundImage:'url(/img/sneakers/1.jpg)'}}
@@ -43,7 +45,7 @@ function App() {
                             <strong>1044 руб.</strong>
                         </li>
                     </ul>
-                    <button>Оформить заказ</button>
+                    <button className="greenButton">Оформить заказ</button>
                 </div>
             </div>
           </div>
