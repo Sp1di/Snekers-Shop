@@ -1,4 +1,6 @@
 import React from "react";
+import "./Card.module.scss"
+
 
 
 
@@ -15,7 +17,7 @@ return(
             <span>Цена:</span>
             <strong>{props.price} р.</strong>
         </div>
-        <button className="button">
+        <button className="button" s>
             <img width={8} height={8} src="/img/plus.svg" alt="Plus"/>
         </button>
     </div>

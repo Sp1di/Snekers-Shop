@@ -1,4 +1,5 @@
 import React from "react";
+import "./Overlay.module.scss";
 
 function Overlay() {
 return(

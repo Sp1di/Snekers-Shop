@@ -1,28 +1,28 @@
 import React from "react";
-import Overlay  from "./Components/Overlay";
-import Card from "./Components/Card";
-import Header from "./Components/Header";
+import Overlay  from "./Components/Overlay/Overlay";
+import Card from "./Components/Card/Card";
+import Header from "./Components/Header/Header";
 
 
 const arr=[
     {
-        title:'Мужские Кроссовки Nike Blaze Mid Suede',
+        title:'Мужские Кроссовки Nike Air Max 270',
         price: 12999, 
         imageUrl: '/img/Sneakers/1.jpg',
     },    
     {
-        title:'Мужские Кроссовки Nike Blaze Mid Suede', 
-        price: 15600, 
+        title:'Мужские Кроссовки Nike Blazer Mid Suede', 
+        price: 8490, 
         imageUrl: '/img/Sneakers/2.jpg', 
     },
     {
-        title:'Мужские Кроссовки Nike Blaze Mid Suede', 
-        price: 8499, 
+        title:'Кроссовки Puma X Aka Boku Future Rider', 
+        price: 8990, 
         imageUrl: '/img/Sneakers/3.jpg' ,
     },
     {
-        title:'Мужские Кроссовки Nike Blaze Mid Suede',
-        price: 8999, 
+        title:'Мужские Кроссовки Nike Blazer Mid Suede',
+        price: 12990, 
         imageUrl: '/img/Sneakers/4.jpg' ,
     },
 ];
