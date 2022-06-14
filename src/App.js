@@ -1,32 +1,37 @@
 import React from "react";
 import Overlay  from "./Components/Overlay";
 import Card from "./Components/Card";
+import Header from "./Components/Header";
+
+
+const arr=[
+    {
+        title:'Мужские Кроссовки Nike Blaze Mid Suede',
+        price: 12999, 
+        imageUrl: '/img/Sneakers/1.jpg',
+    },    
+    {
+        title:'Мужские Кроссовки Nike Blaze Mid Suede', 
+        price: 15600, 
+        imageUrl: '/img/Sneakers/2.jpg', 
+    },
+    {
+        title:'Мужские Кроссовки Nike Blaze Mid Suede', 
+        price: 8499, 
+        imageUrl: '/img/Sneakers/3.jpg' ,
+    },
+    {
+        title:'Мужские Кроссовки Nike Blaze Mid Suede',
+        price: 8999, 
+        imageUrl: '/img/Sneakers/4.jpg' ,
+    },
+];
 
 function App() {
   return (
-      <div className="wrapper clear">
+      <div className="wrapper clear"> 
         <Overlay/>
-        <header className="d-flex justify-between align-center">
-            <div className="d-flex align-center">
-                <img width={40} height={40} src="img/logo.png" alt="logo"/>
-                <div >
-                    <h3 className="text-uppercase">Sneakers Shop</h3>
-                    <p className="opacity-5">Магазин лучших кросовок</p>
-                </div>
-            </div>
-            <ul className="d-flex ">
-                <li className="mr-30">
-                    <img width={18} height={18} src="/img/basket.svg" alt="basket" />
-                    <span>1205 руб.</span>
-                </li>
-                <li>
-                    <img width={18} height={18} src="/img/like.svg" alt="like" />
-                </li>
-                <li>
-                    <img width={25} height={25} src="/img/user.svg" alt="user" />
-                </li>
-            </ul>
-        </header>
+        <Header/>
         <div className="content p-50">
             <div className="d-flex align-center mb-40 justify-between" >
                 <h1 >Все кросовки</h1>
@@ -36,10 +41,9 @@ function App() {
                 </div>
             </div>
             <div className="sneakers d-flex">
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                {arr.map((obj)=>
+                <Card title={obj.title} price={obj.price} imageUrl={obj.imageUrl}/>
+                )}
             </div>
         </div>
       </div>

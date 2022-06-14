@@ -2,7 +2,7 @@ import React from "react";
 
 function Overlay() {
 return(
-<div className="overlay">
+<div style={{display: 'none'}}  className="overlay ">
     <div className="drawer">
         <h2 className="mb-40 d-flex justify-between ">
             Корзина<img className="removeBtn cu-p" src="/img/btn-remove.svg" alt="Remove"/>
