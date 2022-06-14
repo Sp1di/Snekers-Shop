@@ -1,4 +1,3 @@
-import "./Header.module.scss"
 
 
 function Header(){
