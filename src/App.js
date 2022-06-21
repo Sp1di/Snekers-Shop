@@ -1,7 +1,8 @@
 import React from "react";
-import Overlay  from "./Components/Overlay/Overlay";
-import Card from "./Components/Card/Card";
-import Header from "./Components/Header/Header";
+import Overlay  from "./Components/Overlay";
+import Card from "./Components/Card";
+import Header from "./Components/Header";
+
 
 
 const arr=[
@@ -28,10 +29,13 @@ const arr=[
 ];
 
 function App() {
+
+    const [cartOpened,setCartOpened] = React.useState(false);
+
   return (
       <div className="wrapper clear"> 
-        <Overlay/>
-        <Header/>
+        {cartOpened && <Overlay onClose={()=> setCartOpened(false)} />}
+         <Header onClickCart={()=> setCartOpened(true)} />
         <div className="content p-50">
             <div className="d-flex align-center mb-40 justify-between" >
                 <h1 >Все кросовки</h1>
@@ -41,9 +45,14 @@ function App() {
                 </div>
             </div>
             <div className="sneakers d-flex">
-                {arr.map((obj)=>
-                <Card title={obj.title} price={obj.price} imageUrl={obj.imageUrl}/>
-                )}
+                {arr.map((obj)=>(
+                    <Card 
+                        title={obj.title} 
+                        price={obj.price}
+                        imageUrl={obj.imageUrl}
+                        
+                    />
+                ))}
             </div>
         </div>
       </div>

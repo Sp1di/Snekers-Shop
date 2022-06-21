@@ -1,14 +1,14 @@
 import React from "react";
-import "./Overlay.module.scss";
+import styles from "./Overlay.module.scss";
 
-function Overlay() {
+function Overlay(props) {
 return(
-<div style={{display: 'none'}}  className="overlay ">
-    <div className="drawer">
+<div   className={styles.overlay} >
+    <div className={styles.drawer}>
         <h2 className="mb-40 d-flex justify-between ">
-            Корзина<img className="removeBtn cu-p" src="/img/btn-remove.svg" alt="Remove"/>
+            Корзина<img onClick={props.onClose} className="removeBtn cu-p" src="/img/btn-remove.svg" alt="Remove"/>
         </h2>
-        <div className="items">
+        <div className={styles.items}>
             <div className="cartItem d-flex align-center">
                 <div style={{backgroundImage:'url(/img/sneakers/1.jpg)'}}
                     className="cartItemImg ">
